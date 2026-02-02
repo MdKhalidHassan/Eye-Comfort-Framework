@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Eye Comfort Framework",
+  "version": "1.0.0",
+  "description": "Professional eye comfort extension based on visual ergonomics and circadian-safe principles.",
+  "icons": {
+    "16": "eyepic.png",
+    "48": "eyepic.png",
+    "128": "eyepic.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "notifications"]
+}
